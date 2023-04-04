@@ -36,4 +36,11 @@ class Array
     end
     true
   end
+
+  def my_none?
+    for element in self do
+      return false if yield element
+    end
+    true
+  end
 end
