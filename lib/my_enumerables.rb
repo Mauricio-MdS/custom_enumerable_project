@@ -43,4 +43,14 @@ class Array
     end
     true
   end
+
+  def my_count
+    return length unless block_given?
+
+    i = 0
+    for element in self do
+      i += 1 if yield element
+    end
+    i
+  end
 end
