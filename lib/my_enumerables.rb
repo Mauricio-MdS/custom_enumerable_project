@@ -61,4 +61,11 @@ class Array
     end
     array
   end
+
+  def my_inject(aggregator)
+    for element in self do
+      aggregator = yield aggregator, element
+    end
+    aggregator
+  end
 end
