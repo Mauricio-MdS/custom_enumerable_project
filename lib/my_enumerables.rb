@@ -29,4 +29,11 @@ class Array
     end
     array
   end
+
+  def my_all?
+    for element in self do
+      return false unless yield element
+    end
+    true
+  end
 end
