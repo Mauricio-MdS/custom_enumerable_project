@@ -53,4 +53,12 @@ class Array
     end
     i
   end
+
+  def my_map
+    array = []
+    for element in self do
+      array.push(yield element)
+    end
+    array
+  end
 end
