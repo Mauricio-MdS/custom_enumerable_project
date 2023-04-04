@@ -14,4 +14,11 @@ class Array
     end
     self
   end
+
+  def my_each_with_index
+    0.upto(length - 1) do |index|
+      yield self[index], index
+    end
+    self
+  end
 end
