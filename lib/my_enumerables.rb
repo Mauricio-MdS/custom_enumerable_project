@@ -21,4 +21,12 @@ class Array
     end
     self
   end
+
+  def my_select
+    array = []
+    for element in self do
+      array.push(element) if yield element
+    end
+    array
+  end
 end
